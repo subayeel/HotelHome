@@ -1,0 +1,236 @@
+.m-container {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5vh 0 5vh 0;
+}
+
+.m-body {
+  display: -ms-grid;
+  display: grid;
+  height: 90vh;
+  width: 95vw;
+  margin: auto;
+  -ms-grid-rows: (1fr)[10];
+      grid-template-rows: repeat(10, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.m-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: #21665A;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.m-header h2 {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  margin-left: 20px;
+}
+
+.m-header h3 {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  cursor: pointer;
+  text-align: end;
+  margin-right: 20px;
+}
+
+.m-header span {
+  display: block;
+}
+
+.m-header span:hover {
+  color: #3fcbb4;
+}
+
+.m-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 11;
+}
+
+.m-aside {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  padding: 20px;
+  background-color: #F4F0E8;
+  color: #743201;
+}
+
+.m-aside .dish-image {
+  height: 30vh;
+}
+
+.m-aside img {
+  height: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+}
+
+.m-aside .price-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.m-aside .price-container h3 {
+  margin: 0;
+  display: inline;
+}
+
+.m-aside .ingredients h2 {
+  margin: 20px 0 0 0;
+  font-family: Arial;
+}
+
+.m-aside .ingredients p {
+  color: #21665A;
+  font-family: Arial;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.m-main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F7F7F7;
+  -webkit-box-flex: 75%;
+      -ms-flex: 75%;
+          flex: 75%;
+  padding: 20px;
+}
+
+.m-main-content .chef-details {
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+  font-family: Arial;
+}
+
+.m-main-content .chef-details .chef-image {
+  height: 30vh;
+}
+
+.m-main-content .chef-details img {
+  display: block;
+  height: 100%;
+  margin: auto;
+}
+
+.m-main-content .chef-details h2 {
+  margin: 20px 0 0 0;
+  color: #743201;
+}
+
+.m-main-content .chef-details p {
+  color: #21665A;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.m-main-content .chef-details h3 {
+  margin: 10px 0 0 0;
+  color: #743201;
+}
+
+.m-main-content .map-btn {
+  position: relative;
+  -webkit-box-flex: 70%;
+      -ms-flex: 70%;
+          flex: 70%;
+}
+
+.m-main-content .map-btn img {
+  width: 100%;
+}
+
+.m-main-content .map-btn .map-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.m-main-content .map-btn .map-details h5 {
+  margin: 0;
+  display: inline;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #555555;
+}
+
+.m-main-content .map-btn .order-btn {
+  position: absolute;
+}
+
+.order-btn {
+  margin-top: 10px;
+  float: right;
+  bottom: 10px;
+  right: 10px;
+}
+
+.primary-btn {
+  display: inline;
+  margin: 5px;
+  background-color: #743201;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.primary-btn:hover {
+  cursor: pointer;
+  background-color: #704221;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+/*# sourceMappingURL=DishModal.css.map */

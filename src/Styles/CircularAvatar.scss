@@ -1,0 +1,23 @@
+@import "../Variables/Variables.scss";
+
+.circular-bg {
+  display: inline-block;
+  position: relative;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+
+  background-color: $primaryColor;
+  margin: 0 10px 0 10px;
+
+  img {
+    position: absolute;
+    width: 100%;
+
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}

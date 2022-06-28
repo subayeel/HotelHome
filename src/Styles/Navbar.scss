@@ -1,0 +1,106 @@
+@import "../Variables/Variables.scss";
+
+.navbar-main {
+  display: flex;
+  
+  
+  .first-half-navbar {
+    background-color: $primarybg;
+    display: flex;
+    align-items: center;
+    flex: 50%;
+    
+    .navbar-logo {
+      flex: 30%;
+      display: inline;
+      .logo-image {
+        margin: 0 0 0 20px;
+        color: #2f675a;
+        display: inline;
+        font-size: 35px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+    }
+
+    .navbar-links {
+      flex: 70%;
+      ul {
+        list-style-type: none;
+
+        .home-button {
+          border-radius: 5px;
+          padding: 5px;
+          background-color: #e96629;
+          a {
+            color: white;
+          }
+        }
+      }
+      li {
+        display: inline;
+        margin: 0 7px 0 7px;
+      }
+      a {
+        color: #2f675a;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+      }
+    }
+  }
+  .second-half-navbar {
+    display: flex;
+    flex: 50%;
+    align-items: center;
+    background-color: $secondarybg;
+    .search-bar {
+      flex: 60%;
+      .search-bar-textfield {
+        border-radius: 10px;
+        height: 35px;
+        width: 220px;
+        margin: 0 0 0 20px;
+        border: 1px #707070 solid;
+        ::-webkit-input-placeholder {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .profile-avatar {
+        
+        
+      .avatar {
+        position: relative;
+        
+        border-radius: 100%;
+        height: 50px;
+        width: 50px;
+        margin: 10px;
+        background-color: $primaryColor;
+        img{
+          position: absolute;
+          margin: auto;
+          width: 100%;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+
+        }
+      }
+      .profile-card-container {
+        display: none;
+      }
+      
+      &:hover {
+        .profile-card-container {
+          display: block;
+        }
+      }
+    }
+  }
+}

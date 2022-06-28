@@ -1,0 +1,120 @@
+@import "../Variables/Variables.scss";
+
+.main-dish-card {
+  display: inline-block;
+  position: relative;
+  height: 331px;
+  width: 275px;
+  background-color: $primaryColor;
+  border-radius: 10px;
+  margin: 100px 20px 0 0;
+  box-shadow:5px 0px 10px  #898989;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  .dish-plate {
+    position: absolute;
+
+    height: 210px;
+    width: 210px;
+    background-color: $secondarybg;
+    border-radius: 100%;
+    top: -20%;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+    .dish-image {
+      position: absolute;
+      height: 190px;
+      width: 190px;
+      border-radius: 100%;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      overflow: hidden;
+      img {
+        position: absolute;
+        width: 100%;
+
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(340%);
+    background-color: #FFECD9;
+    height: 10%;
+    width: 20%;
+    text-align: center;
+    
+    margin-left: 20px;
+    margin: 10 20px 0 0;
+    border-radius: 10px;
+    
+    .cart-icon {
+      
+      color: #743201;
+      
+    }
+  }
+  .dish-content{
+   position: absolute;
+   top: 150px;
+   left: 0;
+   right: 0;
+
+       .dish-header{
+        .dish-name{
+          display: block;
+          font-size: 22px;
+          font-weight: 600;
+          text-align: center; 
+          color: #FFECD9;
+          margin: 5px;
+        }
+        .calories{
+          display: block;
+          font-size: 14px;
+          font-weight: 400;
+          text-align: center; 
+          color: #C1BBB5;
+        }
+       }
+       .dish-line{
+        border: 1px solid #184D44;
+       }
+       .dish-details{
+        display: flex;
+        text-align: center;
+        .price-col{
+          span{
+            display: block;
+            color: #C1BBB5;
+            font-size: 14px;
+            margin: 5px;
+          }
+          display: block;
+          flex: 50%;
+        }
+        .potion-col{
+          span{
+            display: block;
+            color: #C1BBB5;
+            font-size: 14px;
+            margin: 5px;
+          }
+          flex:50%;
+        }
+       }
+  }
+}

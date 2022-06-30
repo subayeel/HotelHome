@@ -9,6 +9,7 @@ import Navbar from "./Navbar";
 import VegPage from "./VegPage";
 import CircularAvatar from "./CircularAvatar";
 import chefs from "../data/cheflist";
+import SmallDishCard from "./SmallDishCard";
 
 function HomePage() {
   const [modalState, setModal] = useState(false);
@@ -22,6 +23,10 @@ function HomePage() {
   function createDishCard(details) {
     return <DishCard dishName={details.dishName}></DishCard>;
   }
+
+  function createSmallDishCard(details) {
+    return <SmallDishCard dishName={details.dishName} handleState={setModal}></SmallDishCard>;
+  }
   function createChefAvatar(details) {
     return <CircularAvatar image={details.image}></CircularAvatar>;
   }
@@ -34,7 +39,7 @@ function HomePage() {
           <Route path="/vegpage" element={<VegPage />}></Route>
         </Routes>
       </Router>
-      <section className="veg-page">
+      <section className="veg-page-main">
         <div className="first-half-veg-page">
           <img
             src="https://firebasestorage.googleapis.com/v0/b/eduqate-d65f5.appspot.com/o/veg-removebg-preview.png?alt=media&token=d16c09a3-627e-426f-a075-ddf8b93ce73d"
@@ -58,19 +63,25 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <button
-        onClick={() => {
-          openModal();
-        }}
-      >
-        Select Dish
-      </button>
+      <section className="nearby-dishes">
+        <h3>Veg Dishes within range 2Km</h3>
+        <div className="scroll-parent">
+          <div className="dish-list">{dishes.map(createSmallDishCard)}</div>
+        </div>
+
+        <h3>Veg Dishes within range 5Km</h3>
+        <div className="scroll-parent">
+          <div className="dish-list">{dishes.map(createSmallDishCard)}</div>
+        </div>
+      </section>
+      
 
       <DishModal show={modalState} handleState={setModal}></DishModal>
 
-      <div className="scroll-parent">
+
+      {/* <div className="scroll-parent">
         <div className="dish-list">{dishes.map(createDishCard)}</div>
-      </div>
+      </div> */}
     </div>
   );
 }

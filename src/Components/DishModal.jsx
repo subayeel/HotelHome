@@ -1,12 +1,12 @@
 import React from "react";
 import "../Styles/DishModal.scss";
-import PrimaryButton from "./PrimaryButton"; 
+import PrimaryButton from "./PrimaryButton";
 
 function DishModal(props) {
   var show = props.show;
   var setModal = props.handleState;
-  console.log(show)
-  if (show==true) {
+  console.log(show);
+  if (show == true) {
     return (
       <div className="m-container">
         <div className="m-body">
@@ -53,24 +53,26 @@ function DishModal(props) {
                   />
                 </div>
                 <div>
-                <h3>Chef Name</h3>
+                  <h3>Chef Name</h3>
                   <div className="chef-message">
                     <h2>Hello there!</h2>
                   </div>
-                  
+
                   <p>
-                    
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Possimus nesciunt vero similique eos veritatis. Incidunt.
-                    
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Possimus nesciunt vero similique eos veritatis. Incidunt.
                   </p>
                 </div>
               </div>
               <div className="map-btn">
-                <img
-                  src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg"
-                  alt=""
-                />
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36830.14552207696!2d74.51758169331063!3d14.000682446210506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbc431e28dabfab%3A0x7060a42cfeac9a4!2sBhatkal%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1656352633733!5m2!1sen!2sin"
+                  width="600"
+                  height="350"
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
                 <div className="map-details">
                   <h5>
                     Estimate Time: <small>23 mins</small>

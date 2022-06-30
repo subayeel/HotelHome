@@ -1,7 +1,7 @@
 @import "../Variables/Variables.scss";
 
 
-.veg-page{
+.veg-page-main{
   height: 88vh;
   
   display: flex;
@@ -23,7 +23,7 @@
     }
   }
   .second-half-veg-page{
-    display: inline;
+    
     background-color: $secondarybg;
     flex: 50%;
     .veg-title{
@@ -39,10 +39,20 @@
   }
 }
 
+.nearby-dishes{
+  h3{
+    margin: 20px 0 0 20px;
+    color: $brownBtnColor ;
+  }
+}
+
 .scroll-parent {
     overflow: auto;
     white-space: nowrap;
     margin: 0 0 0 20px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   .dish-list {
     display: inline-block;
     margin:0;
@@ -51,10 +61,13 @@
   
 }
 .scroll-chef{
-  width: 50vw;
+  width: 48vw;
   overflow: scroll;
-    white-space: nowrap;
-    margin: 0 0 0 20px;
+  white-space: nowrap;
+  margin: 0 0 0 20px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .chef-list{
     display: inline-block;
     margin:0;

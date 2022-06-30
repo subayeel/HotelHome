@@ -46,7 +46,7 @@ function Navbar() {
             <input
               className="search-bar-textfield"
               type="text"
-              placeholder="Search"
+              placeholder="&nbsp;&#128270;&nbsp;&nbsp;&nbsp;Search"
             ></input>
           </div>
           <div className="profile-avatar">

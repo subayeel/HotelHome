@@ -19,6 +19,7 @@
   margin: auto;
   
   
+  
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(2, 1fr);
 }
@@ -138,7 +139,7 @@
   .map-btn {
     position: relative;
     flex: 70%;
-    img {
+    iframe {
       width: 100%;
     }
     .map-details {

@@ -1,4 +1,4 @@
-import "../Styles/DishCard.scss";
+import "../Styles/DishCard.scss"; 
 import { FaCartPlus } from "react-icons/fa";
 
 import React from "react";

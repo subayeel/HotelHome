@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import DishModal from "./DishModal";
-import ProfileCard from "./ProfileCard";
 import "../Styles/HomePage.scss";
 import DishCard from "./DishCard";
 import dishes from "../data/dishes.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import VegPage from "./VegPage";
-import CircularAvatar from "./CircularAvatar";
 import chefs from "../data/cheflist";
 import SmallDishCard from "./SmallDishCard";
+import { StyledNavbar } from "./styled/Navbar.styled";
+import Avatar from "./Avatar";
+import { ThemeProvider } from "styled-components";
 
 function HomePage() {
   const [modalState, setModal] = useState(false);
@@ -20,20 +21,38 @@ function HomePage() {
   // window.addEventListener("click",function(){
   //   setProfileCard(false);
   // })
+
+  const theme = {
+    colors: {
+      primarybg: "#F4F0E8",
+      secondarybg: "#F7F7F7",
+      primaryColor: "#21665A",
+      brownBtnColor: "#743201",
+      orangeBtnColor: "#FF6801",
+    },
+  };
+
   function createDishCard(details) {
     return <DishCard dishName={details.dishName}></DishCard>;
   }
 
   function createSmallDishCard(details) {
-    return <SmallDishCard dishName={details.dishName} handleState={setModal}></SmallDishCard>;
+    return (
+      <SmallDishCard
+        dishName={details.dishName}
+        handleState={setModal}
+      ></SmallDishCard>
+    );
   }
   function createChefAvatar(details) {
-    return <CircularAvatar image={details.image}></CircularAvatar>;
+    return <Avatar large imageUrl={details.imageUrl}></Avatar>;
   }
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Router>
-        <Navbar></Navbar>
+        <StyledNavbar>
+          <Navbar></Navbar>
+        </StyledNavbar>
         <Routes>
           <Route path="/" element={<DishModal></DishModal>}></Route>
           <Route path="/vegpage" element={<VegPage />}></Route>
@@ -74,15 +93,13 @@ function HomePage() {
           <div className="dish-list">{dishes.map(createSmallDishCard)}</div>
         </div>
       </section>
-      
 
       <DishModal show={modalState} handleState={setModal}></DishModal>
-
 
       {/* <div className="scroll-parent">
         <div className="dish-list">{dishes.map(createDishCard)}</div>
       </div> */}
-    </div>
+    </ThemeProvider>
   );
 }
 

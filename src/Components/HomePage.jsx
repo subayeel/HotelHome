@@ -22,15 +22,7 @@ function HomePage() {
   //   setProfileCard(false);
   // })
 
-  const theme = {
-    colors: {
-      primarybg: "#F4F0E8",
-      secondarybg: "#F7F7F7",
-      primaryColor: "#21665A",
-      brownBtnColor: "#743201",
-      orangeBtnColor: "#FF6801",
-    },
-  };
+  
 
   function createDishCard(details) {
     return <DishCard dishName={details.dishName}></DishCard>;
@@ -48,16 +40,8 @@ function HomePage() {
     return <Avatar large imageUrl={details.imageUrl}></Avatar>;
   }
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <StyledNavbar>
-          <Navbar></Navbar>
-        </StyledNavbar>
-        <Routes>
-          <Route path="/" element={<DishModal></DishModal>}></Route>
-          <Route path="/vegpage" element={<VegPage />}></Route>
-        </Routes>
-      </Router>
+    <div>
+      
       <section className="veg-page-main">
         <div className="first-half-veg-page">
           <img
@@ -99,7 +83,7 @@ function HomePage() {
       {/* <div className="scroll-parent">
         <div className="dish-list">{dishes.map(createDishCard)}</div>
       </div> */}
-    </ThemeProvider>
+    </div>
   );
 }
 

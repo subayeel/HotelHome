@@ -3,13 +3,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Avatar from "./Avatar";
-import ProfileCard from "./ProfileCard";
+
 import SearchBar from "./SearchBar";
-import { StyledAvatar } from "./styled/Avatar.styled";
+
 import { StyledLogo } from "./styled/Logo.styled";
 import { StyledNavbar } from "./styled/Navbar.styled";
+
 import { StyledNavbarLink } from "./styled/NavbarLinks.styled";
-import { StyledSearchBar } from "./styled/Input.styled";
+
 
 function Navbar() {
   const [profileCardState, setProfileCard] = useState(false);
@@ -18,7 +19,7 @@ function Navbar() {
     setProfileCard(true);
   };
   return (
-    <>
+    <StyledNavbar>
       <StyledLogo>
         <div>LOGO</div>
       </StyledLogo>
@@ -54,7 +55,7 @@ function Navbar() {
       
         <Avatar imageUrl="https://firebasestorage.googleapis.com/v0/b/eduqate-d65f5.appspot.com/o/chef1-removebg-preview.png?alt=media&token=10642367-5cf8-4dcf-8f77-f1ec3c004e3b"></Avatar>
       
-    </>
+    </StyledNavbar>
   );
 }
 

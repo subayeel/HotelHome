@@ -1,4 +1,3 @@
-import { FaRegMoon } from "react-icons/fa";
 import { ThemeProvider } from "styled-components";
 import HomePage from "./Components/HomePage";
 import Navbar from "./Components/Navbar";
@@ -24,16 +23,10 @@ function App() {
       <Router>
       <Navbar></Navbar>
         <Routes>
-          <Route path="/" element={<DishModal></DishModal>}></Route>
+          <Route path="/" element={<HomePage/>}></Route>
           <Route path="/vegpage" element={<VegPage />}></Route>
         </Routes>
       </Router>
-
-      
-      
-      <HomePage>
-      
-      </HomePage>
     </ThemeProvider>
   );
 }

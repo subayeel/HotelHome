@@ -166,21 +166,7 @@
   right: 10px;
 }
 
-.primary-btn {
-  &:hover{
-    cursor: pointer;
-    background-color: #704221;
-  }
-  display: inline;
-  margin: 5px;
-  background-color: $brownBtnColor;
-  padding: 5px 10px 5px 10px;
-  border-radius: 5px;
-  width: fit-content;
-  color: white;
 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
 .display-block{
   display:block;

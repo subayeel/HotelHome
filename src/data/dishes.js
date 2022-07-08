@@ -16,7 +16,11 @@ const dishes=[{
   },{
     key:6,
     dishName: 'Fried Rice',
-  }
+  },
+  {
+    key:7,
+    dishName: 'Fried Rice',
+  },
  ];
 
 export default dishes;

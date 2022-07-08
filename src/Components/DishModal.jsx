@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/DishModal.scss";
-import PrimaryButton from "./PrimaryButton";
+import Button from "./Button";
 
 function DishModal(props) {
   var show = props.show;
@@ -83,8 +83,8 @@ function DishModal(props) {
                 </div>
 
                 <div className="order-btn">
-                  <PrimaryButton text="Order" />
-                  <PrimaryButton text="Subscribe" />
+                  <Button text="Order" />
+                  <Button text="Subscribe" />
                 </div>
               </div>
             </div>

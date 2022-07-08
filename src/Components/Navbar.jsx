@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Avatar from "./Avatar";
 
 import SearchBar from "./SearchBar";
+import { StyledAvatar } from "./styled/Avatar.styled";
 
 import { StyledLogo } from "./styled/Logo.styled";
 import { StyledNavbar } from "./styled/Navbar.styled";
@@ -52,9 +53,9 @@ function Navbar() {
 
       <SearchBar></SearchBar>
 
-      
+      <StyledAvatar size='60px'>
         <Avatar imageUrl="https://firebasestorage.googleapis.com/v0/b/eduqate-d65f5.appspot.com/o/chef1-removebg-preview.png?alt=media&token=10642367-5cf8-4dcf-8f77-f1ec3c004e3b"></Avatar>
-      
+        </StyledAvatar>
     </StyledNavbar>
   );
 }

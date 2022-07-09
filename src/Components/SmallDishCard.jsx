@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { DishCardContainer, FillArea } from "./styled/DishCard.styled";
 import {
   Center,
-  Flex,
+  FlexItem,
   FlexContainer,
   LinkButton,
   RatingBox,
@@ -32,13 +32,13 @@ function SmallDishCard(props) {
       <h3>{props.dishName}</h3>
       <small>Turkish Cusine</small>
       <FlexContainer>
-        <Flex flex="33%">
+        <FlexItem margin="10px" flex="33%">
           <RatingBox>4.6</RatingBox>
-        </Flex>
-        <Flex flex="33%">
+        </FlexItem>
+        <FlexItem margin="10px" flex="33%">
           <small>12pm-3pm</small>
-        </Flex>
-        <Flex flex="33%">Rs. 120</Flex>
+        </FlexItem>
+        <FlexItem margin="10px" flex="33%">Rs. 120</FlexItem>
       </FlexContainer>
       <hr></hr>
       <Center>

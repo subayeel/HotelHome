@@ -14,11 +14,6 @@ import { StyledNavbarLink } from "./styled/NavbarLinks.styled";
 
 
 function Navbar() {
-  const [profileCardState, setProfileCard] = useState(false);
-
-  var openProfileCard = () => {
-    setProfileCard(true);
-  };
   return (
     <StyledNavbar>
       <StyledLogo>

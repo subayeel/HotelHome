@@ -2,9 +2,11 @@ import { ThemeProvider } from "styled-components";
 import HomePage from "./Components/HomePage";
 import Navbar from "./Components/Navbar";
 import GlobalStyles from "./Components/styled/Global";
-import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DishModal from "./Components/DishModal";
 import VegPage from "./Components/VegPage";
+import ProfileCard from "./Components/ProfileCard";
+import { useState } from "react";
 
 function App() {
   const theme = {
@@ -21,9 +23,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Router>
-      <Navbar></Navbar>
+        <Navbar></Navbar>
+
         <Routes>
-          <Route path="/" element={<HomePage/>}></Route>
+          <Route path="/" element={<HomePage />}></Route>
           <Route path="/vegpage" element={<VegPage />}></Route>
         </Routes>
       </Router>
